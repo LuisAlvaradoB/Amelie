@@ -1,0 +1,186 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 23-oct-2018, 22:24:13
+    Author     : luis
+*/
+
+/*:root {
+    --color-first   : #ffb900; amarillo
+    --color-second  : #505050; negro
+    --color-third   : #a3a3a3; gris
+    --color-accent  : #ffd460;
+    --color-dark    : #282D31;
+    --color-border  : #DFE0E0;
+    --color-text    : #53575A;
+    --color-bg      : #eeeeee;
+    --z-normal      : 1;
+    --z-tooltip     : 10;
+    --z-fixed       : 100;
+    --z-modal       : 1000;
+}*/
+
+body {
+    background:#eeeeee; /*color-bg*/
+    color: #53575A; /*color-text*/
+}
+
+.main-header {
+    height: 3rem;
+    border-bottom: 1px solid #DFE0E0; /*color-border*/
+    background: #fff;
+    background: #fff; /*color fondo nav amarillo*/
+}
+
+.logo {
+    height: 2rem;
+}
+
+.main-menu-link {
+    color: #53575A; /*color-text*/
+    font-size: .8rem;
+}
+
+/* Media query para el menu  */
+@media screen and (max-width: 1024px) {
+    .main-menu {
+        position: fixed;
+        top: 3rem;
+        right: 0;
+        background: #282D31; /*color-dark*/
+        z-index: 100; /*z-fixed*/
+    }
+
+    .main-menu-link {
+        color: #fff;    
+    }
+}
+
+/* Banner */
+.main-banner {
+    /* background: var(--color-first); */
+    background: #ffb900; /*color-first*/
+    padding: 4rem 0 5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+    position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    .main-banner {
+        padding: 8rem 0 10rem;
+    }
+}
+
+/* Topbar  */
+
+.topbar--dark {
+    background: #505050; /*color-second*/
+    color: #fff;
+}
+
+.main-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Banner img central */
+
+.main-banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0.2;
+}
+
+.main-banner-data {
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+/* Contenido principal main */
+
+.center {
+    text-align: center;
+}
+
+/* Main features */
+
+.main-features {
+    margin-top: 2rem;
+    
+}
+
+.section-title {
+    margin-top: 2rem;
+    color: #53575A; /*color-text*/
+}
+
+.logo-feature {
+    height: 6rem;
+}
+
+/* main-footer */
+
+.main-footer {
+    background: #505050; /*color-third*/
+    color: #fff;
+    margin-top: 4rem;
+    padding: 1rem ;
+}
+
+#txt-main-ofertas{
+    text-align: center;
+    color: #ffb900;
+}
+
+.producto-oferta {
+    border: 1px solid #505050;
+}
+
+.main-ofertas-producto {
+    border: 2px solid #505050;
+    padding: 1rem;
+    color: #505050;   
+}
+
+.txt-oferta-precio {
+    color: red;
+}
+
+.main-form-btn {
+    background: #005387; /*color-second*/
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    outline: none;
+}
+
+.main-btn-ir-catalogo {
+    margin-top: 1rem;
+    background: #005387;
+    width: 100%;
+    height: 80%;
+    color: #fff;
+    outline: none;
+    font-size: 20px;
+}
+
+.svg-cart {
+    width: 100%;
+    height: 100%;
+}
+
+#img-delivery {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    
+}
