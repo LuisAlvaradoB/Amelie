@@ -5,6 +5,7 @@
  */
 package Datos;
 
+import Modelo.Usuario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -34,16 +35,16 @@ public class Conexion {
         }
     }
     
-//    public ArrayList<Usuario> listar() throws Exception{
-//        conexion();
-//        ArrayList<Usuario> users = new ArrayList<Usuario>();
-//        ResultSet rs = state.executeQuery("SELECT * FROM usuarios");
-//        while(rs.next()){
-//            Usuario user = new Usuario();
-//            user.setUsuario((String) rs.getObject(1));
-//            user.setPassword((String) rs.getObject(2));
-//            users.add(user);
-//        }
-//        return users;
-//    }
+    public ArrayList<Usuario> listar() throws Exception{
+        conexion();
+        ArrayList<Usuario> users = new ArrayList<Usuario>();
+        ResultSet rs = state.executeQuery("SELECT * FROM usuarios");
+        while(rs.next()){
+            Usuario user = new Usuario();
+            user.setUsuario((String) rs.getObject(1));
+            user.setPassword((String) rs.getObject(2));
+            users.add(user);
+        }
+        return users;
+    }
 }

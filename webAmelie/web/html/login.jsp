@@ -48,7 +48,7 @@
         </div>
     </div>
 
-        <form action="../IngresoLogin" method="post"> 
+        <form action="../VerificarLogin" method="post"> 
             <main>
                 <div class="ed-container main.form center">
                     <div class="ed-item main-form-email">
