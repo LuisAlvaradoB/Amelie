@@ -1272,7 +1272,7 @@ body.desarrollo .ed-container:before,body.desarrollo .ed-item:before,body.desarr
     margin-left:0;
     margin-right:0;
     -ms-grid-columns:(1fr)[1];
-        grid-template-columns:repeat(1,1fr);
+    grid-template-columns:repeat(1,1fr);
   }
   body{
     overflow-x:visible;
