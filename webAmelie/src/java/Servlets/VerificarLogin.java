@@ -49,13 +49,14 @@ public class VerificarLogin extends HttpServlet {
             Conexion conexion = new Conexion(); // CREO OBJETO CONEXION PARA PODER LLAMAR EL METODO LISTAR
 
             Usuario userIngresado = new Usuario();
-            userIngresado.setnombreUsuario(request.getParameter("Nombre de Usuario")); // SETEO LOS CAMPOS DESDE EL FORM AL OBJETO USUARIO
+            userIngresado.setnombreUsuario(request.getParameter("NombreUsuario")); // SETEO LOS CAMPOS DESDE EL FORM AL OBJETO USUARIO
             userIngresado.setPassword(request.getParameter("Clave"));
 
             ArrayList<Usuario> credencialesBase = conexion.listar(); // RELLENO EL ARRAY DE USARIOS DESDE LA BASE DE DATOS A ESTE ARRALIST
 
             out.print(userIngresado.getnombreUsuario()); // IMPRESION DE CRENDDENCIALES DEV
             out.print(userIngresado.getPassword());
+            out.print("<h1>que wea pasa>/h1>");
             out.print("<br>");
             boolean encontrado = false;
             
@@ -64,7 +65,7 @@ public class VerificarLogin extends HttpServlet {
                 if (user.getnombreUsuario().equals(userIngresado.getnombreUsuario()) && user.getPassword().equals(userIngresado.getPassword())) { // COMPARA EL OBJETO QUE VIENE DE LA LISTA Y LOS CAMPOS QUE VIENE DEL FORM
                     out.print("<h1>USUARIO EN LA BASE DE DATOS</h1>");
                     encontrado = true; // CAMBIO EL VALOR DE BOOLEANO PARA QUE NO PASE POR EL IF QUE INDICA QUE NO ESTA EL USUARIO EN LA BASE DE DATOS
-                   // RERIDECCION A AL CARRITO DE COMPRAS
+                    response.sendRedirect("index.jsp");
                     break;
                 }
             }
@@ -73,7 +74,7 @@ public class VerificarLogin extends HttpServlet {
             }
             
         }catch (Exception e){
-            
+            System.out.println(e);
         }finally{
             out.println("</body>");
             out.println("</html>");

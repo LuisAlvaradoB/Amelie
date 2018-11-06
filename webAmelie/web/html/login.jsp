@@ -52,10 +52,10 @@
             <main>
                 <div class="ed-container main.form center">
                     <div class="ed-item main-form-email">
-                        <input type="text" value="email" placeholder="Email" name="Email">
+                        <input type="text" value="" placeholder="Nombre de Usuario" name="NombreUsuario">
                     </div>
                     <div class="ed-item main-form-password">
-                        <input type="password" value="password" placeholder="Contraseña" name="Clave">
+                        <input type="password" value="" placeholder="Contraseña" name="Clave">
                     </div>
                     <div class="ed-item main-form-boton-ingresar">
                         <button class="button radius main-form-btn">Ingresar</button>

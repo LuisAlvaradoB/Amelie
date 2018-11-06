@@ -44,7 +44,7 @@ public class RegistroUsuario extends HttpServlet {
             out.println("<title>Servlet RegistroUsuario</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet RegistroUsuario at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Registrando Usuario...</h1>");
             
             Conexion conexion = new Conexion();
             
@@ -62,7 +62,7 @@ public class RegistroUsuario extends HttpServlet {
             
             
             if(conexion.ingreso_datos(cliente, usuarioNuevo)){
-                out.println("<h2>LA PERSONA HA SIDO INGRESADA CON RUT "+cliente.getNombre()+"</h2>");
+                out.println("<h2>LA PERSONA HA SIDO INGRESADA CON EXITO "+cliente.getNombre()+"</h2>");
             }else{
                 out.println("<h2>LA PERSONA NO HA PODIDO SER INGRESADA</h2>");
             }

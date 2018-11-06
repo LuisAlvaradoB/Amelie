@@ -10,6 +10,7 @@ import Modelo.Usuario;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -42,8 +43,8 @@ public class Conexion {
         ResultSet rs = state.executeQuery("SELECT * FROM usuario");
         while(rs.next()){
             Usuario user = new Usuario();
-            user.setnombreUsuario((String) rs.getObject(1));
-            user.setPassword((String) rs.getObject(2));
+            user.setnombreUsuario((String) rs.getObject(2));
+            user.setPassword((String) rs.getObject(3));
             users.add(user);
         }
         return users;
@@ -55,14 +56,8 @@ public class Conexion {
             conexion();
             int i = state.executeUpdate("INSERT INTO cliente (Nombre,Apellido_Paterno,Apellido_Materno,email) VALUES ('"+cliente.getNombre()+"','"+cliente.getApellidoPaterno()+"','"+cliente.getApellidoMaterno()+"','"+cliente.getEmail()+"')");
             
-            
-            
-            
-            int e = state.executeUpdate("INSERT INTO usuario (nombreUsuario,clave) VALUES ('"+usuario.getnombreUsuario()+"','"+usuario.getPassword()+"')");
-            
-            
-            
-            
+            int id = buscarID(cliente.getEmail());
+            int e = state.executeUpdate("INSERT INTO usuario VALUES ('"+id+"','"+usuario.getnombreUsuario()+"','"+usuario.getPassword()+"')");
             
             if(i > 0 & e > 0){
                 encontrado = true;
@@ -74,5 +69,19 @@ public class Conexion {
             System.out.println(e);
         }
         return encontrado;
+    }
+     public int buscarID(String email) throws SQLException{
+        ResultSet rs = state.executeQuery("SELECT * FROM cliente WHERE email = '"+email+"'");
+        int id = 0;
+        while(rs.next()){
+            Cliente cliente = new Cliente();
+            cliente.setId((Integer) rs.getObject(1));
+            cliente.setNombre((String) rs.getObject(2));
+            cliente.setApellidoPaterno((String) rs.getObject(3));
+            cliente.setApellidoMaterno((String) rs.getObject(4));
+            id = cliente.getId();
+            }
+        return id;
+        
     }
 }

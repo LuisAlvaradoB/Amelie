@@ -11,6 +11,7 @@ package Modelo;
  */
 public class Cliente {
     
+    private int id;
     private String nombre;
     private String apellidoPaterno;
     private String apellidoMaterno;
@@ -53,6 +54,14 @@ public class Cliente {
 
     public void setApellidoMaterno(String apellidoMaterno) {
         this.apellidoMaterno = apellidoMaterno;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
     
     
