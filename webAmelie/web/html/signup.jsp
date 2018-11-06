@@ -49,30 +49,35 @@
     </div>
 
     <main>
-        <div class="ed-container main.form center">
-            <div class="ed-item main-form-name">
-                <input type="text" value="" placeholder="Nombre">
+        <form action="../RegistroUsuario" method="post">
+            <div class="ed-container main.form center">
+                <div class="ed-item main-form-name">
+                    <input type="text" value="" placeholder="Nombre" name="Nombre">
+                </div>
+                <div class="ed-item main-form-lastnamePat">
+                    <input type="text" value="" placeholder="Apellido Paterno" name="ApellidoP">
+                </div>
+                 <div class="ed-item main-form-lastnameMat">
+                    <input type="text" value="" placeholder="Apellido Materno" name="ApellidoM">
+                </div>
+                <div class="ed-item main-form-email">
+                    <input type="text" value="" placeholder="Email" name="Email">
+                </div>
+                <div class="ed-item main-form-email">
+                    <input type="text" value="" placeholder="Nombre de Usuario" name="NombreUsuario">
+                </div>
+                <div class="ed-item main-form-password">
+                    <input type="password" value="" placeholder="Contraseña" name="Clave">
+                </div>
+                <div class="ed-item main-form-passwordRe">
+                    <input type="password" value="" placeholder="Repita contraseña" name="ClaveR">
+                </div>
+                <div class="ed-item main-form-boton-ingresar">
+                    <button class="button radius main-form-btn">Ingresar</button>
+                </div>
+                <p class="to-center">¿Aún no tienes cuenta? Regístrate aquí</p>
             </div>
-            <div class="ed-item main-form-lastnamePat">
-                <input type="text" value="" placeholder="Apellido Paterno">
-            </div>
-             <div class="ed-item main-form-lastnameMat">
-                <input type="text" value="" placeholder="Apellido Materno">
-            </div>
-            <div class="ed-item main-form-email">
-                <input type="text" value="" placeholder="Email">
-            </div>
-            <div class="ed-item main-form-password">
-                <input type="text" value="" placeholder="Contraseña">
-            </div>
-            <div class="ed-item main-form-passwordRe">
-                <input type="text" value="" placeholder="Repita contraseña">
-            </div>
-            <div class="ed-item main-form-boton-ingresar">
-                <button class="button radius main-form-btn">Ingresar</button>
-            </div>
-            <p class="to-center">¿Aún no tienes cuenta? Regístrate aquí</p>
-        </div>
+        </form>
     </main>
     <footer class="main-footer" role="contentinfo" itemscope="" itemtype="http://schema.org/WPFooter">
         <div class="ed-container main-footer--content">

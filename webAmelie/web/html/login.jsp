@@ -26,7 +26,7 @@
             <nav class="ed-item s-70 m-80 l-50 main-end cross-center">
                 <ul class="main-menu ed-menu l-horizontal">
                     <li class="main-menu-item"><a class="main-menu-link" href="../index.jsp">Inicio</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Catalogo</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="html/catalogo.jsp">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Iniciar Sesión</a></li>
@@ -52,10 +52,10 @@
             <main>
                 <div class="ed-container main.form center">
                     <div class="ed-item main-form-email">
-                        <input type="text" value="email" placeholder="Email" name="Email">
+                        <input type="text" value="" placeholder="Nombre de Usuario" name="NombreUsuario">
                     </div>
                     <div class="ed-item main-form-password">
-                        <input type="password" value="password" placeholder="Contraseña" name="Clave">
+                        <input type="password" value="" placeholder="Contraseña" name="Clave">
                     </div>
                     <div class="ed-item main-form-boton-ingresar">
                         <button class="button radius main-form-btn">Ingresar</button>

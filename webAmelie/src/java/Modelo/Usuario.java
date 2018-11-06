@@ -11,20 +11,20 @@ package Modelo;
  */
 public class Usuario {
     
-    private String usuario;
+    private String nombreUsuario;
     private String password;
     
     public Usuario(){
-        usuario="";
+        nombreUsuario="";
         password="";
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getnombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setnombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
     public String getPassword() {
