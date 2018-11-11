@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package Controlador;
 
-import Datos.Conexion;
 import Modelo.Cliente;
 import Modelo.Usuario;
 import java.io.IOException;
@@ -41,7 +40,7 @@ public class RegistroUsuario extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet RegistroUsuario</title>");            
+            out.println("<title>Registro</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Registrando Usuario...</h1>");
@@ -62,9 +61,11 @@ public class RegistroUsuario extends HttpServlet {
             
             
             if(conexion.ingreso_datos(cliente, usuarioNuevo)){
-                out.println("<h2>LA PERSONA HA SIDO INGRESADA CON EXITO "+cliente.getNombre()+"</h2>");
+                out.println("<h2>Registarado con éxito "+cliente.getNombre()+"</h2>");
+                response.sendRedirect("html/login.jsp");
             }else{
-                out.println("<h2>LA PERSONA NO HA PODIDO SER INGRESADA</h2>");
+                out.println("<h2>Error al Registrar, Vuelva a Intentarlo</h2>");
+                out.println("<br/><a href='signup.jsp'>Volver</a>");
             }
             
             

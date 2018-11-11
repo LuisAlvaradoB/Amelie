@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package Controlador;
 
-import Datos.Conexion;
 import Modelo.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,7 +40,7 @@ public class VerificarLogin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet VerificarLogin</title>");            
+            out.println("<title>Iniciando Sesión</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Verificando Inicio de Sesión...</h1>");
@@ -54,23 +53,22 @@ public class VerificarLogin extends HttpServlet {
 
             ArrayList<Usuario> credencialesBase = conexion.listar(); // RELLENO EL ARRAY DE USARIOS DESDE LA BASE DE DATOS A ESTE ARRALIST
 
-            out.print(userIngresado.getnombreUsuario()); // IMPRESION DE CRENDDENCIALES DEV
-            out.print(userIngresado.getPassword());
-            out.print("<h1>que wea pasa>/h1>");
+                       
             out.print("<br>");
             boolean encontrado = false;
             
             for (Usuario user : credencialesBase) { // ITETERO EL ARRAYLIST SEGUN LA CANTIDAD DE OBJETOS EN LA LISTA
                
                 if (user.getnombreUsuario().equals(userIngresado.getnombreUsuario()) && user.getPassword().equals(userIngresado.getPassword())) { // COMPARA EL OBJETO QUE VIENE DE LA LISTA Y LOS CAMPOS QUE VIENE DEL FORM
-                    out.print("<h1>USUARIO EN LA BASE DE DATOS</h1>");
+                    out.print("<h1>Redirigiendo...</h1>");
                     encontrado = true; // CAMBIO EL VALOR DE BOOLEANO PARA QUE NO PASE POR EL IF QUE INDICA QUE NO ESTA EL USUARIO EN LA BASE DE DATOS
-                    response.sendRedirect("index.jsp");
+                    response.sendRedirect("html/catalogo.jsp");
                     break;
                 }
             }
             if (!encontrado){ // NEGACION DEL BOOLEANO PARA INDICAR QUE NO ESTA EL USUARIO INGRESADO EN LA BASE DE DATOS
-                out.print("<h1>USUARIO NO ENCONTRADO EN LA BASE DE DATOS</h1>");
+                out.println("<h2>Usuario no existe, Porfavor Registrar para poder usar el Sitio Web</h2>");
+                out.println("<br/><a href='html/signup.jsp'>Registrar</a>");
             }
             
         }catch (Exception e){

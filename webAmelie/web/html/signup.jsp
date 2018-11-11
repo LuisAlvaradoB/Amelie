@@ -29,7 +29,7 @@
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="html/sucursal.html">Iniciar Sesión</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="login.jsp">Iniciar Sesión</a></li>
                     
                 </ul>
             </nav>

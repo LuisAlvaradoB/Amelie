@@ -30,7 +30,7 @@
                     <li class="main-menu-item"><a class="main-menu-link" href="../../html/catalogo.jsp">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Iniciar Sesión</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="../login.jsp">Iniciar Sesión</a></li>
                     
                 </ul>
             </nav>
@@ -40,10 +40,12 @@
 
     
     <div class="ed-container main-caract">
-        <div class="ed-item l-25">
-            <h2>nombre-producto</h2>
+        <div class="ed-item l-25" name="">
+            <%!
+            String nombreProducto = "Soldadura";%>
+            <%out.print("<h2>"+nombreProducto+"</h2>");%>
             <img class="img-producto to-center" src="../../img/catalogo/pasta-de-soldar.jpeg" alt="pasta-de-soldar"/>
-
+                       
         </div>
         <div class="ed-item l-50">
             <div class="ed-item fila-caract-gral">

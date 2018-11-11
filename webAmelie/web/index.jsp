@@ -18,7 +18,7 @@
             <nav class="ed-item s-70 m-80 l-50 main-end cross-center">
                 <ul class="main-menu ed-menu l-horizontal">
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Inicio</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="html/catalogo.jsp">Catalogo</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="html/signup.jsp">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="html/login.jsp">Iniciar Sesión</a></li>
