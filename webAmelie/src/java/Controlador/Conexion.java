@@ -96,19 +96,33 @@ public class Conexion {
         return id;
         
     }
-//     public Producto cargarProducto(){
-//         
-//         ResultSet rs = state.executeQuery("SELECT * FROM productos WHERE email = '"++"'");
-//        
-//        while(rs.next()){
-//            Producto pro = new Producto();
-//            pro.setId((Integer) rs.getObject(1));
-//            pro.setNombre((String) rs.getObject(2));
-//            pro.setApellidoPaterno((String) rs.getObject(3));
-//            pro.setApellidoMaterno((String) rs.getObject(4));
-//            id = cliente.getId();
-//            }
-//        return null;
-//         
-//     }
+     public ArrayList<Producto> cargarProducto(){
+         conexion();
+         Producto pro = new Producto();
+         ArrayList<Producto>  lista = new ArrayList();
+         String sql = "SELECT * FROM productos";
+//         String sql= "SELECT * FROM productos WHERE idproductos = '"+id+"'";
+        try {
+            resultado = consulta.executeQuery(sql);
+            while(resultado.next()){
+            
+            pro.setNombre(resultado.getString("nombre"));
+            pro.setMarca(resultado.getString("marca"));
+            pro.setPeso(resultado.getString("peso"));
+            pro.setGarantia(resultado.getString("garantia"));
+            pro.setMaterial(resultado.getString("material"));
+            pro.setOrigen(resultado.getString("origen"));
+            pro.setDescripcion(resultado.getString("descripcion"));
+            pro.setRutaImagen(resultado.getString("rutaImagen"));
+            pro.setCantidadstock(resultado.getInt("cantidadstock"));
+            lista.add(pro);
+              
+            }
+        } catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return lista;
+        
+        
+     }
 }

@@ -4,7 +4,12 @@
     Author     : luis
 --%>
 
+<%@page import="Modelo.Producto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="javax.servlet.http.HttpServlet"%>
+<%@page import="javax.servlet.http.HttpServletRequest"%>
+<%@page import="javax.servlet.http.HttpServletResponse"%>
+<%@page import="javax.servlet.http.HttpSession"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,13 +43,16 @@
 
     </header>
 
+    <% HttpSession misession= (HttpSession) request.getSession();
+
+    Producto p= (Producto) misession.getAttribute("pro");
+    
+    %>
     
     <div class="ed-container main-caract">
         <div class="ed-item l-25" name="">
-            <%!
-            String nombreProducto = "Soldadura";%>
-            <%out.print("<h2>"+nombreProducto+"</h2>");%>
-            <img class="img-producto to-center" src="../../img/catalogo/pasta-de-soldar.jpeg" alt="pasta-de-soldar"/>
+            <h2><%=p.getNombre()%></h2>
+            <img class="img-producto to-center" src="<%=p.getRutaImagen()%>" alt="pasta-de-soldar"/>
                        
         </div>
         <div class="ed-item l-50">

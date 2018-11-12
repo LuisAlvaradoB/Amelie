@@ -11,6 +11,7 @@ package Modelo;
  */
 public class Producto {
     
+    private int codigo;
     private String nombre;
     private String marca;
     private String peso;
@@ -18,10 +19,12 @@ public class Producto {
     private String descripcion;
     private String material;
     private String origen;
+    private String rutaImagen;
     private int cantidadstock;
     
     
     public Producto(){
+        codigo=0;
         nombre="";
         marca="";
         peso="";
@@ -29,7 +32,24 @@ public class Producto {
         descripcion="";
         material="";
         origen="";
+        rutaImagen="";
         cantidadstock=0;
+    }
+
+    public String getRutaImagen() {
+        return rutaImagen;
+    }
+
+    public void setRutaImagen(String rutaImagen) {
+        this.rutaImagen = rutaImagen;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     /**
