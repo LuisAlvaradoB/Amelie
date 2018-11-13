@@ -35,18 +35,8 @@ public class VerificarLogin extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+
         try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Iniciando Sesión</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Verificando Inicio de Sesión...</h1>");
-            
-            
             Conexion conexion = new Conexion(); // CREO OBJETO CONEXION PARA PODER LLAMAR EL METODO LISTAR
 
             Usuario userIngresado = new Usuario();
@@ -55,30 +45,23 @@ public class VerificarLogin extends HttpServlet {
 
             ArrayList<Usuario> credencialesBase = conexion.listar(); // RELLENO EL ARRAY DE USARIOS DESDE LA BASE DE DATOS A ESTE ARRALIST
 
-                       
-            out.print("<br>");
             boolean encontrado = false;
-            
+
             for (Usuario user : credencialesBase) { // ITETERO EL ARRAYLIST SEGUN LA CANTIDAD DE OBJETOS EN LA LISTA
-               
+
                 if (user.getnombreUsuario().equals(userIngresado.getnombreUsuario()) && user.getPassword().equals(userIngresado.getPassword())) { // COMPARA EL OBJETO QUE VIENE DE LA LISTA Y LOS CAMPOS QUE VIENE DEL FORM
-                    out.print("<h1>Redirigiendo...</h1>");
                     encontrado = true; // CAMBIO EL VALOR DE BOOLEANO PARA QUE NO PASE POR EL IF QUE INDICA QUE NO ESTA EL USUARIO EN LA BASE DE DATOS
-                    response.sendRedirect("html/catalogo.jsp");
+                    response.sendRedirect("html/loginExitoso.jsp");
                     break;
                 }
             }
-            if (!encontrado){ // NEGACION DEL BOOLEANO PARA INDICAR QUE NO ESTA EL USUARIO INGRESADO EN LA BASE DE DATOS
-                out.println("<h2>Usuario no existe, Porfavor Registrar para poder usar el Sitio Web</h2>");
-                out.println("<br/><a href='html/signup.jsp'>Registrar</a>");
+            if (!encontrado) { // NEGACION DEL BOOLEANO PARA INDICAR QUE NO ESTA EL USUARIO INGRESADO EN LA BASE DE DATOS
+                response.sendRedirect("html/loginErroneo.jsp");
             }
+        } catch (Exception e) {
             
-        }catch (Exception e){
-            System.out.println(e);
-        }finally{
-            out.println("</body>");
-            out.println("</html>");
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -34,47 +34,31 @@ public class RegistroUsuario extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        try {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Registro</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Registrando Usuario...</h1>");
-            
-            Conexion conexion = new Conexion();
-            
-            Cliente cliente = new Cliente();
-            cliente.setNombre(request.getParameter("Nombre"));
-            cliente.setApellidoPaterno(request.getParameter("ApellidoP"));
-            cliente.setApellidoMaterno((request.getParameter("ApellidoM")));
-            cliente.setEmail(request.getParameter("Email"));
-            
-            Usuario usuarioNuevo = new Usuario();
-            usuarioNuevo.setnombreUsuario(request.getParameter("NombreUsuario"));
-            usuarioNuevo.setPassword(request.getParameter("Clave"));
-            
-            String claveRe = request.getParameter("ClaveR");
-            
-            
-            if(conexion.ingreso_datos(cliente, usuarioNuevo)){
-                out.println("<h2>Registarado con éxito "+cliente.getNombre()+"</h2>");
+        
+
+        Conexion conexion = new Conexion();
+
+        Cliente cliente = new Cliente();
+        cliente.setNombre(request.getParameter("Nombre"));
+        cliente.setApellidoPaterno(request.getParameter("ApellidoP"));
+        cliente.setApellidoMaterno((request.getParameter("ApellidoM")));
+        cliente.setEmail(request.getParameter("Email"));
+
+        Usuario usuarioNuevo = new Usuario();
+        usuarioNuevo.setnombreUsuario(request.getParameter("NombreUsuario"));
+        usuarioNuevo.setPassword(request.getParameter("Clave"));
+        String claveRe = request.getParameter("ClaveR");
+
+        if (claveRe.equals(usuarioNuevo.getPassword())) {
+            if (conexion.ingreso_datos(cliente, usuarioNuevo)) {
+                //REGISTRO CON EXITO
                 response.sendRedirect("html/login.jsp");
-            }else{
-                out.println("<h2>Error al Registrar, Vuelva a Intentarlo</h2>");
-                out.println("<br/><a href='signup.jsp'>Volver</a>");
+            } else {
+                // REGISTRO ERRONEO
+                response.sendRedirect("html/signup.jsp");
             }
-            
-            
-        } catch(Exception e){
-            
-        }finally{
-            out.println("</body>");
-            out.println("</html>");
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
