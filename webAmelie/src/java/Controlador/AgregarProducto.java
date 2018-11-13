@@ -5,21 +5,18 @@
  */
 package Controlador;
 
-import Modelo.Producto;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Felipe
  */
-public class CargarProductos extends HttpServlet {
+public class AgregarProducto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,27 +29,9 @@ public class CargarProductos extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        try {
-            Producto pro = new Producto();
-            Conexion con = new Conexion();
-//            ArrayList<Producto> lista = new ArrayList();
-//            int id2 = 2;
-//            int id = Integer.parseInt(request.getParameter("2"));
-//            pro = con.cargarProducto();
-
-// ESTO NO VA ACA ES SOLO PARA PROBAR
-            ArrayList<Producto> lista = new ArrayList();
-            lista  = con.cargarProducto();
-            HttpSession sesion = request.getSession();
-            
-            sesion.setAttribute("lista", lista);
-            request.getRequestDispatcher("catalogo-productos/producto.jsp").forward(request, response);
-            
-        } catch (IOException | NumberFormatException | ServletException e) {
-            out.print("<h1>PROBLEMA "+ e + "</h1>");
-        }
-            
+        response.setContentType("text/html;charset=UTF-8");
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -68,8 +47,6 @@ public class CargarProductos extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
-            
     }
 
     /**
