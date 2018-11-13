@@ -14,7 +14,13 @@
     <link rel="stylesheet" href="../css/ed-grid.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/login.css">
-
+    <script type="text/javascript"> 
+        function redireccion(){
+            document.location.href="login.jsp";
+        } 
+        setTimeout ("redireccion()", 5000);
+        //tiempo expresado en milisegundos 
+    </script>
     <title>R3D | Login Exitoso</title>
 </head>
 <body>
@@ -25,11 +31,11 @@
             </div>
             <nav class="ed-item s-70 m-80 l-50 main-end cross-center">
                 <ul class="main-menu ed-menu l-horizontal">
-                    <li class="main-menu-item"><a class="main-menu-link" href="../index.jsp">Inicio</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="catalogo.jsp">Catalogo</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="#">Inicio</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="#">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="login.jsp">Iniciar Sesión</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="#">Iniciar Sesión</a></li>
                     
                 </ul>
             </nav>

@@ -35,27 +35,29 @@ public class RegistroUsuario extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+// Creo un objeto conexion para poder llamar los Metodos
+        Conexion conexion = new Conexion(); 
 
-        Conexion conexion = new Conexion();
-
-        Cliente cliente = new Cliente();
+        Cliente cliente = new Cliente(); 
         cliente.setNombre(request.getParameter("Nombre"));
         cliente.setApellidoPaterno(request.getParameter("ApellidoP"));
         cliente.setApellidoMaterno((request.getParameter("ApellidoM")));
         cliente.setEmail(request.getParameter("Email"));
-
-        Usuario usuarioNuevo = new Usuario();
+// Objeto Usuario que me guarda los datos de USUARIO del cliente
+        Usuario usuarioNuevo = new Usuario(); 
         usuarioNuevo.setnombreUsuario(request.getParameter("NombreUsuario"));
         usuarioNuevo.setPassword(request.getParameter("Clave"));
         String claveRe = request.getParameter("ClaveR");
-
-        if (claveRe.equals(usuarioNuevo.getPassword())) {
+// COMPROBACION DE CONTRASEÑA
+        if (claveRe.equals(usuarioNuevo.getPassword())) { 
             if (conexion.ingreso_datos(cliente, usuarioNuevo)) {
                 //REGISTRO CON EXITO
-                response.sendRedirect("html/login.jsp");
+                // SI ESTA CORRECTO ME MANDA A LOGIN PARA PODER INICIAR SESION
+                response.sendRedirect("html/login.jsp"); 
             } else {
                 // REGISTRO ERRONEO
-                response.sendRedirect("html/signup.jsp");
+                // SI ESTA INCORRECTO ME REDIRIJE AL SIGNUP PARA RE_INGRESAR LOS DATOS
+                response.sendRedirect("html/signup.jsp"); 
             }
         }
 
