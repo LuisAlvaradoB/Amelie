@@ -57,7 +57,7 @@
                  <img class="producto-oferta" src="../img/catalogo/pasta-de-soldar.jpeg" alt="pasta-de-soldar"/>
                  <p>Pasta para soldar 100gr Indepp</p>
                  <h3 class="txt-oferta-precio">Oferta Internet: $ 990</h3>
-                 <button class="button radius main-form-btn"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></button>
+                 <button class="button radius main-form-btn"><a href="login.jsp"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></a></button>
              </div>
       
        
@@ -71,7 +71,7 @@
             <img class="producto-oferta" src="../img/herramientas/sierra-circular.jpeg" alt="sierra-circular"/>
             <p>Sierra circular + taladro percutor + sierra caladora</p>
             <h3 class="txt-oferta-precio">Oferta Internet: $ 69.990</h3>
-            <button class="button radius main-form-btn"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></button>
+            <button class="button radius main-form-btn"><a href="login.jsp"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></a></button>
         </div>
        <div class="ed-item l-25 main-ofertas-producto">
             <img class="producto-oferta" src="../img/herramientas/sierra-circular.jpeg" alt="sierra-circular"/>

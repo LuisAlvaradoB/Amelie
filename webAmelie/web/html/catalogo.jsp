@@ -29,7 +29,7 @@
             <nav class="ed-item s-70 m-80 l-50 main-end cross-center">
                 <ul class="main-menu ed-menu l-horizontal">
                     <li class="main-menu-item"><a class="main-menu-link" href="../index.jsp">Inicio</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="catalogo.jsp">Catalogo</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="#">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="login.jsp">Iniciar Sesión</a></li>
@@ -57,7 +57,7 @@
                  <img class="producto-oferta" src="../img/catalogo/pasta-de-soldar.jpeg" alt="pasta-de-soldar"/>
                  <p>Pasta para soldar 100gr Indepp</p>
                  <h3 class="txt-oferta-precio">Oferta Internet: $ 990</h3>
-                 <button class="button radius main-form-btn"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></button>
+                 <button class="button radius main-form-btn"><a href="catalogo-productos/producto.jsp"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></a></button>
              </div>
       
        
