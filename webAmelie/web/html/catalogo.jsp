@@ -62,9 +62,9 @@
       
        
         <div class="ed-item l-25 main-ofertas-producto">
-            <img class="producto-oferta" src="../img/herramientas/sierra-circular.jpeg" alt="sierra-circular"/>
-            <p>Sierra circular + taladro percutor + sierra caladora</p>
-            <h3 class="txt-oferta-precio">Oferta Internet: $ 69.990</h3>
+            <img class="producto-oferta" src="../img/herramientas/atornillador-electrico.jpeg" alt="sierra-circular"/>
+            <p>Atornillador inalámbrico 1/4" DCF060 Dewalt</p>
+            <h3 class="txt-oferta-precio">Oferta Internet: $ 39.990</h3>
             <button class="button radius main-form-btn"><a href="login.jsp"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></a></button>
         </div>
        <div class="ed-item l-25 main-ofertas-producto">
@@ -74,9 +74,9 @@
             <button class="button radius main-form-btn"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></button>
         </div>
        <div class="ed-item l-25 main-ofertas-producto">
-            <img class="producto-oferta" src="../img/herramientas/sierra-circular.jpeg" alt="sierra-circular"/>
-            <p>Sierra circular + taladro percutor + sierra caladora</p>
-            <h3 class="txt-oferta-precio">Oferta Internet: $ 69.990</h3>
+           <img class="producto-oferta" src="../img/herramientas/taladro-percutor.jpeg" alt="sierra-circular"/>
+            <p>Taladro percutor GSB 16 RE 750w Bosch</p>
+            <h3 class="txt-oferta-precio">Oferta Internet: $ 78.990</h3>
             <button class="button radius main-form-btn"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></button>
         </div>
        
