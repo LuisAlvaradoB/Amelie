@@ -41,14 +41,18 @@
 
     
     <div class="ed-container main-caract">
+       
         <div class="ed-item l-25" name="">
             <h2>Pasta para Soldar</h2>
             <img class="img-producto to-center" src="../../img/catalogo/pasta-de-soldar.jpeg" alt="pasta-de-soldar"/>
         </div>
+        
         <div class="ed-item l-50">
+            
             <div class="ed-item fila-caract-gral">
                 <p>marca-producto :</p>
             </div>
+            
             <div class="ed-item fila-caract">
                 <p>Indepp</p>
             </div>
@@ -56,6 +60,7 @@
             <div class="ed-item fila-caract-gral">
                 <p>peso-producto :</p>
             </div>
+            
             <div class="ed-item fila-caract">
                 <p>0,104 kg</p>
             </div>
@@ -63,6 +68,7 @@
             <div class="ed-item fila-caract-gral">
                 <p>garantia-producto :</p>
             </div>
+            
             <div class="ed-item fila-caract">
                 <p>3 meses</p>
             </div>
@@ -70,6 +76,7 @@
             <div class="ed-item fila-caract-gral">
                 <p>material-producto :</p>
             </div>
+            
             <div class="ed-item fila-caract">
                 <p>Estaño</p>
             </div>
@@ -77,9 +84,11 @@
             <div class="ed-item fila-caract-gral">
                 <p>origen-producto :</p>
             </div>
+            
              <div class="ed-item fila-caract">
                 <p>Chile</p>
             </div>
+            
         </div>
         
          <div class="ed-item l-25">
