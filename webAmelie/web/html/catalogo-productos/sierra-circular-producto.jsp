@@ -15,7 +15,17 @@
     <link rel="stylesheet" href="../../css/ed-grid.css">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/catalogo-productos.css">
-    
+    <script type="text/javascript">
+            function Redirigir() {
+                alert("Producto Agregado");
+                document.location.href = "../../AgregarProducto";
+            }
+        </script>
+        <script>
+            function Redirigir2() {
+                document.location.href = "../../TerminarCompra";
+            }
+        </script>
 
     <title>R3D | Producto-Sierra-circular</title>
 </head>
@@ -50,28 +60,28 @@
                 <p>Marca :</p>
             </div>
             <div class="ed-item fila-caract">
-                <p>Indepp</p>
+                <p>Bosh</p>
             </div>
             
             <div class="ed-item fila-caract-gral">
                 <p>Peso producto :</p>
             </div>
             <div class="ed-item fila-caract">
-                <p>0,104 kg</p>
+                <p>2 kg</p>
             </div>
             
             <div class="ed-item fila-caract-gral">
                 <p>Garantia producto :</p>
             </div>
             <div class="ed-item fila-caract">
-                <p>3 meses</p>
+                <p>12 meses</p>
             </div>
             
             <div class="ed-item fila-caract-gral">
                 <p>Material producto :</p>
             </div>
             <div class="ed-item fila-caract">
-                <p>Estaño</p>
+                <p>Plastico</p>
             </div>
             
             <div class="ed-item fila-caract-gral">
@@ -88,22 +98,24 @@
                      Descripcion producto :
                  </p>  
                  <p>
-                     Su uso es complementario a la soldadura. Se utiliza para 
-                     limpiar la superficie antes de ser soldada. Fácil de utilizar.
+                     Kit de Herramientas para Carpintería.
                  </p>
                  
                  <p>
-                     Precio : $69.990
+                 <h4>Precio : $69.990</h4>
                  </p>
                  
              </div>
              <div class="ed-item">
-                 <a><input class="form-cantidad" type="text" name="cantidad-producto" value="" /> Cantidad producto</a>
+                 <p><input class="form-cantidad" type="text" name="cantidad-producto" value="" /> Cantidad producto</p>
              </div>
              
              <div class="ed-item">
-                 <button class="button radius main-form-btn btn-comprar">Comprar</button>
-             </div>
+                    <button class="button radius main-form-btn btn-comprar" onclick="Redirigir()">Agregar</button>
+                </div>
+                <div class="ed-item">
+                    <button class="button radius main-form-btn btn-comprar" onclick="Redirigir2()">Terminar Compra</button>
+                </div>
              
         </div>
     </div>

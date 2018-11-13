@@ -46,6 +46,8 @@ public class AgregarProducto extends HttpServlet {
         p1.setGarantia("3 Meses");
         p1.setMaterial("Estaño");
         p1.setPrecio(1499);
+//        int cantidad = Integer.valueOf(request.getParameter("cantidad-producto"));
+//        p1.setCantidadComprada(cantidad);
         
         Usuario.proCliente.add(p1);
         
@@ -57,7 +59,7 @@ public class AgregarProducto extends HttpServlet {
         p2.setGarantia("12 Meses");
         p2.setMaterial("Plastico");
         p2.setPrecio(14999);
-        
+//        p2.setCantidadComprada(cantidad);
         Usuario.proCliente.add(p2);
         
         response.sendRedirect("html/catalogo.jsp");

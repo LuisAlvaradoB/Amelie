@@ -53,12 +53,15 @@ public class RegistroUsuario extends HttpServlet {
             if (conexion.ingreso_datos(cliente, usuarioNuevo)) {
                 //REGISTRO CON EXITO
                 // SI ESTA CORRECTO ME MANDA A LOGIN PARA PODER INICIAR SESION
-                response.sendRedirect("html/login.jsp"); 
+                response.sendRedirect("html/registroCorrecto.jsp"); 
             } else {
                 // REGISTRO ERRONEO
                 // SI ESTA INCORRECTO ME REDIRIJE AL SIGNUP PARA RE_INGRESAR LOS DATOS
-                response.sendRedirect("html/signup.jsp"); 
+                response.sendRedirect("html/registroErroneo.jsp"); 
             }
+            
+        }else{
+            response.sendRedirect("html/registroErroneo.jsp");
         }
 
     }

@@ -14,7 +14,13 @@
     <link rel="stylesheet" href="../css/ed-grid.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/login.css">
-
+    <script type="text/javascript"> 
+        function redireccion(){
+            document.location.href="signup.jsp";
+        } 
+        setTimeout ("redireccion()", 5000);
+        //tiempo expresado en milisegundos 
+    </script>
     <title>R3D | Registro Erróneo</title>
 </head>
 <body>

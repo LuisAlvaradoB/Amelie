@@ -122,7 +122,7 @@
                 </div>
 
                 <div class="ed-item">
-                    <p><input class="form-cantidad" type="text" name="cantidad-producto" value="1" />  Cantidad</p>
+                    <p><input class="form-cantidad" type="text" name="cantidad-producto" placeholder="0" />  Cantidad</p>
                 </div>
                 <br>
                 <div class="ed-item">

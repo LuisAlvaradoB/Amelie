@@ -20,6 +20,7 @@ public class Producto {
     private String material;
     private String origen;
     private int precio;
+    private int cantidadComprada;
     
     
     public Producto(){
@@ -32,6 +33,15 @@ public class Producto {
         material="";
         origen="";
         precio=0;
+        cantidadComprada =0;
+    }
+
+    public int getCantidadComprada() {
+        return cantidadComprada;
+    }
+
+    public void setCantidadComprada(int cantidadComprada) {
+        this.cantidadComprada = cantidadComprada;
     }
 
     public int getPrecio() {
