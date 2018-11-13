@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servlets;
+package Controlador;
 
-import Datos.Conexion;
+import Modelo.Cliente;
 import Modelo.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Felipe
  */
-@WebServlet(name = "VerificarLogin", urlPatterns = {"/VerificarLogin"})
-public class VerificarLogin extends HttpServlet {
+@WebServlet(name = "RegistroUsuario", urlPatterns = {"/RegistroUsuario"})
+public class RegistroUsuario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,40 +40,37 @@ public class VerificarLogin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet VerificarLogin</title>");            
+            out.println("<title>Registro</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Verificando Inicio de Sesión...</h1>");
+            out.println("<h1>Registrando Usuario...</h1>");
             
-            Conexion conexion = new Conexion(); // CREO OBJETO CONEXION PARA PODER LLAMAR EL METODO LISTAR
-
-            Usuario userIngresado = new Usuario();
-            userIngresado.setnombreUsuario(request.getParameter("NombreUsuario")); // SETEO LOS CAMPOS DESDE EL FORM AL OBJETO USUARIO
-            userIngresado.setPassword(request.getParameter("Clave"));
-
-            ArrayList<Usuario> credencialesBase = conexion.listar(); // RELLENO EL ARRAY DE USARIOS DESDE LA BASE DE DATOS A ESTE ARRALIST
-
-            out.print(userIngresado.getnombreUsuario()); // IMPRESION DE CRENDDENCIALES DEV
-            out.print(userIngresado.getPassword());
-            out.print("<h1>que wea pasa>/h1>");
-            out.print("<br>");
-            boolean encontrado = false;
+            Conexion conexion = new Conexion();
             
-            for (Usuario user : credencialesBase) { // ITETERO EL ARRAYLIST SEGUN LA CANTIDAD DE OBJETOS EN LA LISTA
-               
-                if (user.getnombreUsuario().equals(userIngresado.getnombreUsuario()) && user.getPassword().equals(userIngresado.getPassword())) { // COMPARA EL OBJETO QUE VIENE DE LA LISTA Y LOS CAMPOS QUE VIENE DEL FORM
-                    out.print("<h1>USUARIO EN LA BASE DE DATOS</h1>");
-                    encontrado = true; // CAMBIO EL VALOR DE BOOLEANO PARA QUE NO PASE POR EL IF QUE INDICA QUE NO ESTA EL USUARIO EN LA BASE DE DATOS
-                    response.sendRedirect("index.jsp");
-                    break;
-                }
-            }
-            if (!encontrado){ // NEGACION DEL BOOLEANO PARA INDICAR QUE NO ESTA EL USUARIO INGRESADO EN LA BASE DE DATOS
-                out.print("<h1>USUARIO NO ENCONTRADO EN LA BASE DE DATOS</h1>");
+            Cliente cliente = new Cliente();
+            cliente.setNombre(request.getParameter("Nombre"));
+            cliente.setApellidoPaterno(request.getParameter("ApellidoP"));
+            cliente.setApellidoMaterno((request.getParameter("ApellidoM")));
+            cliente.setEmail(request.getParameter("Email"));
+            
+            Usuario usuarioNuevo = new Usuario();
+            usuarioNuevo.setnombreUsuario(request.getParameter("NombreUsuario"));
+            usuarioNuevo.setPassword(request.getParameter("Clave"));
+            
+            String claveRe = request.getParameter("ClaveR");
+            
+            
+            if(conexion.ingreso_datos(cliente, usuarioNuevo)){
+                out.println("<h2>Registarado con éxito "+cliente.getNombre()+"</h2>");
+                response.sendRedirect("html/login.jsp");
+            }else{
+                out.println("<h2>Error al Registrar, Vuelva a Intentarlo</h2>");
+                out.println("<br/><a href='signup.jsp'>Volver</a>");
             }
             
-        }catch (Exception e){
-            System.out.println(e);
+            
+        } catch(Exception e){
+            
         }finally{
             out.println("</body>");
             out.println("</html>");

@@ -26,10 +26,10 @@
             <nav class="ed-item s-70 m-80 l-50 main-end cross-center">
                 <ul class="main-menu ed-menu l-horizontal">
                     <li class="main-menu-item"><a class="main-menu-link" href="../index.jsp">Inicio</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="html/catalogo.jsp">Catalogo</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="catalogo.jsp">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Iniciar Sesión</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="login.jsp">Iniciar Sesión</a></li>
                     
                 </ul>
             </nav>
@@ -58,7 +58,7 @@
                         <input type="password" value="" placeholder="Contraseña" name="Clave">
                     </div>
                     <div class="ed-item main-form-boton-ingresar">
-                        <button class="button radius main-form-btn">Ingresar</button>
+                        <button class="button radius main-form-btn" >Ingresar</button>
                     </div>
                     <p class="to-center">¿Aún no tienes cuenta? <a href="../html/signup.jsp">Regístrate aquí</a></p>
                 </div>

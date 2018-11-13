@@ -92,7 +92,7 @@
                 
             </div>
             <div class="ed-item l-20">
-                <button class="button radius main-btn-ir-catalogo">Ir al catálogo</button>
+                <button class="button radius main-btn-ir-catalogo"><a href="html/login.jsp">Ir al catálogo</a></button>
             </div>
             <div class="ed-item l-40"></div>
         </div>
