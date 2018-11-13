@@ -6,7 +6,7 @@
 
 <%@page import="Controlador.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="Modelo.Producto, java.util.ArrayList" %>
+<%@page import="Modelo.Producto, java.util.ArrayList, Controlador.Conexion" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,9 +130,7 @@
             <button class="button radius main-form-btn"><img class="svg-cart-catalogo" src="../assets/svg/043-cart.svg"></button>
         </div>
    </div>
-    
-    
-        
+            
 
         
         

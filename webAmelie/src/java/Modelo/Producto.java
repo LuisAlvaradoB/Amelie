@@ -21,6 +21,7 @@ public class Producto {
     private String origen;
     private String rutaImagen;
     private int cantidadstock;
+    private int precio;
     
     
     public Producto(){
@@ -34,6 +35,15 @@ public class Producto {
         origen="";
         rutaImagen="";
         cantidadstock=0;
+        precio=0;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     public String getRutaImagen() {
