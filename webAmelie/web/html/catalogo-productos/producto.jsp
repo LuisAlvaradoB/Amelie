@@ -15,7 +15,17 @@
         <link rel="stylesheet" href="../../css/ed-grid.css">
         <link rel="stylesheet" href="../../css/styles.css">
         <link rel="stylesheet" href="../../css/catalogo-productos.css">
-
+        <script type="text/javascript"> 
+            function Redirigir(){
+                alert("Producto Agregado");
+                document.location.href="../../AgregarProducto"; 
+            }
+        </script>
+       <script>
+           function Redirigir2(){
+               document.location.href="../../TerminarCompra";
+           }
+       </script>
 
         <title>R3D | Catalogo</title>
     </head>
@@ -88,6 +98,14 @@
                 <div class="ed-item fila-caract">
                     <p>Chile</p>
                 </div>
+                
+                <div class="ed-item fila-caract-gral">
+                    <p>Precio :</p>
+                </div>
+
+                <div class="ed-item fila-caract">
+                    <p>$ 1.499</p>
+                </div>
 
             </div>
 
@@ -108,10 +126,10 @@
                 </div>
                 <br>
                 <div class="ed-item">
-                    <button class="button radius main-form-btn btn-comprar">Agregar</button>
+                    <button class="button radius main-form-btn btn-comprar" onclick="Redirigir()">Agregar</button>
                 </div>
                 <div class="ed-item">
-                    <button class="button radius main-form-btn btn-comprar">Terminar Compra</button>
+                    <button class="button radius main-form-btn btn-comprar" onclick="Redirigir2()">Terminar Compra</button>
                 </div>
 
             </div>

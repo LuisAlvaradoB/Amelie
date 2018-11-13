@@ -5,8 +5,9 @@
  */
 package Controlador;
 
+import Modelo.Producto;
+import Modelo.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,6 +31,36 @@ public class AgregarProducto extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        Producto p1 = new Producto();
+        Producto p2 = new Producto();
+        Producto p3 = new Producto();
+        Producto p4 = new Producto();
+        
+        
+        p1.setNombre("Pasta de Soldar");
+        p1.setMarca("Indepp");
+        p1.setPeso("0.104KG");
+        p1.setOrigen("Chile");
+        p1.setDescripcion("Pasta para soldar");
+        p1.setGarantia("3 Meses");
+        p1.setMaterial("Estaño");
+        p1.setPrecio(1499);
+        
+        Usuario.proCliente.add(p1);
+        
+        p2.setNombre("Herramienta");
+        p2.setMarca("Bosh");
+        p2.setPeso("1KG");
+        p2.setOrigen("Chile");
+        p2.setDescripcion("Taladro Mecánico");
+        p2.setGarantia("12 Meses");
+        p2.setMaterial("Plastico");
+        p2.setPrecio(14999);
+        
+        Usuario.proCliente.add(p2);
+        
+        response.sendRedirect("html/catalogo.jsp");
         
         
     }

@@ -15,7 +15,7 @@ public class Usuario {
     
     private String nombreUsuario;
     private String password;
-    static ArrayList<Producto> proCliente = new ArrayList();
+    public static ArrayList<Producto> proCliente = new ArrayList();
     
     public Usuario(){
         nombreUsuario="";
