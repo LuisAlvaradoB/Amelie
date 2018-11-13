@@ -105,7 +105,7 @@ public class Conexion {
         try {
             resultado = consulta.executeQuery(sql);
             while(resultado.next()){
-            
+            pro.setCodigo(resultado.getInt("idproductos"));
             pro.setNombre(resultado.getString("nombre"));
             pro.setMarca(resultado.getString("marca"));
             pro.setPeso(resultado.getString("peso"));
@@ -115,6 +115,7 @@ public class Conexion {
             pro.setDescripcion(resultado.getString("descripcion"));
             pro.setRutaImagen(resultado.getString("rutaImagen"));
             pro.setCantidadstock(resultado.getInt("cantidadstock"));
+            pro.setPrecio(resultado.getInt("precio"));
             lista.add(pro);
               
             }
