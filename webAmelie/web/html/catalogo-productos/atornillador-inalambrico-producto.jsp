@@ -18,7 +18,7 @@
     <script type="text/javascript">
             function Redirigir() {
                 alert("Producto Agregado");
-                document.location.href = "../../AgregarProducto";
+                document.location.href = "../catalogo.jsp";
             }
         </script>
         <script>
