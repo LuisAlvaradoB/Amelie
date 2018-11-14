@@ -11,7 +11,7 @@ package Modelo;
  */
 public class Producto {
     
-    
+    private int codigo;
     private String nombre;
     private String marca;
     private String peso;
@@ -21,10 +21,11 @@ public class Producto {
     private String origen;
     private int precio;
     private int cantidadComprada;
+    private int precioTotalProducto;
     
     
     public Producto(){
-        
+        codigo=0;
         nombre="";
         marca="";
         peso="";
@@ -34,6 +35,23 @@ public class Producto {
         origen="";
         precio=0;
         cantidadComprada =0;
+        precioTotalProducto=0;
+    }
+
+    public int getPrecioTotalProducto() {
+        return precioTotalProducto;
+    }
+
+    public void setPrecioTotalProducto(int precioTotalProducto) {
+        this.precioTotalProducto = precioTotalProducto;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 
     public int getCantidadComprada() {

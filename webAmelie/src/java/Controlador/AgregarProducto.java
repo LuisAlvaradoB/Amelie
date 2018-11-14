@@ -8,6 +8,7 @@ package Controlador;
 import Modelo.Producto;
 import Modelo.Usuario;
 import java.io.IOException;
+import java.util.HashSet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -37,7 +38,7 @@ public class AgregarProducto extends HttpServlet {
         Producto p3 = new Producto();
         Producto p4 = new Producto();
         
-        
+        p1.setCodigo(1);
         p1.setNombre("Pasta de Soldar");
         p1.setMarca("Indepp");
         p1.setPeso("0.104KG");
@@ -46,11 +47,14 @@ public class AgregarProducto extends HttpServlet {
         p1.setGarantia("3 Meses");
         p1.setMaterial("Estaño");
         p1.setPrecio(1499);
+        p1.setPrecioTotalProducto(1499);
+        p1.setCantidadComprada(1);
 //        int cantidad = Integer.valueOf(request.getParameter("cantidad-producto"));
-//        p1.setCantidadComprada(cantidad);
+       
         
         Usuario.proCliente.add(p1);
         
+        p2.setCodigo(2);
         p2.setNombre("Herramienta");
         p2.setMarca("Bosh");
         p2.setPeso("1KG");
@@ -59,8 +63,23 @@ public class AgregarProducto extends HttpServlet {
         p2.setGarantia("12 Meses");
         p2.setMaterial("Plastico");
         p2.setPrecio(14999);
-//        p2.setCantidadComprada(cantidad);
+        p2.setCantidadComprada(3);
+        p2.setPrecioTotalProducto(44997);
         Usuario.proCliente.add(p2);
+        
+        p3.setCodigo(3);
+        p3.setNombre("Martillo");
+        p3.setMarca("Steel");
+        p3.setPeso("0.5KG");
+        p3.setOrigen("Chile");
+        p3.setDescripcion("Martillo de Goma");
+        p3.setGarantia("1 Meses");
+        p3.setMaterial("Plastico");
+        p3.setPrecio(5999);
+        p3.setCantidadComprada(2);
+        p3.setPrecioTotalProducto(11998);
+        
+        Usuario.proCliente.add(p3);
         
         response.sendRedirect("html/catalogo.jsp");
         

@@ -5,8 +5,10 @@
  */
 package Controlador;
 
+import Modelo.Producto;
+import Modelo.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,6 +32,16 @@ public class TerminarCompra extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        response.sendRedirect("html/detalleVenta.jsp");
+       
+        
+
+        
+    }
+    public static ArrayList<Producto> retornoLista(){
+        ArrayList <Producto> pro = Usuario.proCliente;
+        
+        return pro;
         
     }
 
@@ -46,6 +58,11 @@ public class TerminarCompra extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+        
+        
+        
+//        request.getSession().setAttribute("pro", pro);
+//        request.getRequestDispatcher("../detalleVenta.jsp").forward(request, response);
     }
 
     /**
