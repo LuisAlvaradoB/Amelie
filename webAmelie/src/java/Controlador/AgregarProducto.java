@@ -5,12 +5,11 @@
  */
 package Controlador;
 
-import Modelo.Cliente;
+import Modelo.Producto;
 import Modelo.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.HashSet;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,8 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Felipe
  */
-@WebServlet(name = "RegistroUsuario", urlPatterns = {"/RegistroUsuario"})
-public class RegistroUsuario extends HttpServlet {
+public class AgregarProducto extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,35 +33,57 @@ public class RegistroUsuario extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-// Creo un objeto conexion para poder llamar los Metodos
-        Conexion conexion = new Conexion(); 
-
-        Cliente cliente = new Cliente(); 
-        cliente.setNombre(request.getParameter("Nombre"));
-        cliente.setApellidoPaterno(request.getParameter("ApellidoP"));
-        cliente.setApellidoMaterno((request.getParameter("ApellidoM")));
-        cliente.setEmail(request.getParameter("Email"));
-// Objeto Usuario que me guarda los datos de USUARIO del cliente
-        Usuario usuarioNuevo = new Usuario(); 
-        usuarioNuevo.setnombreUsuario(request.getParameter("NombreUsuario"));
-        usuarioNuevo.setPassword(request.getParameter("Clave"));
-        String claveRe = request.getParameter("ClaveR");
-// COMPROBACION DE CONTRASEÑA
-        if (claveRe.equals(usuarioNuevo.getPassword())) { 
-            if (conexion.ingreso_datos(cliente, usuarioNuevo)) {
-                //REGISTRO CON EXITO
-                // SI ESTA CORRECTO ME MANDA A LOGIN PARA PODER INICIAR SESION
-                response.sendRedirect("html/registroCorrecto.jsp"); 
-            } else {
-                // REGISTRO ERRONEO
-                // SI ESTA INCORRECTO ME REDIRIJE AL SIGNUP PARA RE_INGRESAR LOS DATOS
-                response.sendRedirect("html/registroErroneo.jsp"); 
-            }
-            
-        }else{
-            response.sendRedirect("html/registroErroneo.jsp");
-        }
-
+        Producto p1 = new Producto();
+        Producto p2 = new Producto();
+        Producto p3 = new Producto();
+        Producto p4 = new Producto();
+        
+        p1.setCodigo(1);
+        p1.setNombre("Pasta de Soldar");
+        p1.setMarca("Indepp");
+        p1.setPeso("0.104KG");
+        p1.setOrigen("Chile");
+        p1.setDescripcion("Pasta para soldar");
+        p1.setGarantia("3 Meses");
+        p1.setMaterial("Estaño");
+        p1.setPrecio(1499);
+        p1.setPrecioTotalProducto(1499);
+        p1.setCantidadComprada(1);
+//        int cantidad = Integer.valueOf(request.getParameter("cantidad-producto"));
+       
+        
+        Usuario.proCliente.add(p1);
+        
+        p2.setCodigo(2);
+        p2.setNombre("Herramienta");
+        p2.setMarca("Bosh");
+        p2.setPeso("1KG");
+        p2.setOrigen("Chile");
+        p2.setDescripcion("Taladro Mecánico");
+        p2.setGarantia("12 Meses");
+        p2.setMaterial("Plastico");
+        p2.setPrecio(14999);
+        p2.setCantidadComprada(3);
+        p2.setPrecioTotalProducto(44997);
+        Usuario.proCliente.add(p2);
+        
+        p3.setCodigo(3);
+        p3.setNombre("Martillo");
+        p3.setMarca("Steel");
+        p3.setPeso("0.5KG");
+        p3.setOrigen("Chile");
+        p3.setDescripcion("Martillo de Goma");
+        p3.setGarantia("1 Meses");
+        p3.setMaterial("Plastico");
+        p3.setPrecio(5999);
+        p3.setCantidadComprada(2);
+        p3.setPrecioTotalProducto(11998);
+        
+        Usuario.proCliente.add(p3);
+        
+        response.sendRedirect("html/catalogo.jsp");
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

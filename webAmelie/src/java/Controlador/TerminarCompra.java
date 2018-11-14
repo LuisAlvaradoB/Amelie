@@ -6,20 +6,19 @@
 package Controlador;
 
 import Modelo.Producto;
+import Modelo.Usuario;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Felipe
  */
-public class CargarProductos extends HttpServlet {
+public class TerminarCompra extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,27 +31,18 @@ public class CargarProductos extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        try {
-            Producto pro = new Producto();
-            Conexion con = new Conexion();
-//            ArrayList<Producto> lista = new ArrayList();
-//            int id2 = 2;
-//            int id = Integer.parseInt(request.getParameter("2"));
-//            pro = con.cargarProducto();
+        response.setContentType("text/html;charset=UTF-8");
+        response.sendRedirect("html/detalleVenta.jsp");
+       
+        
 
-// ESTO NO VA ACA ES SOLO PARA PROBAR
-            ArrayList<Producto> lista = new ArrayList();
-            lista  = con.cargarProducto();
-            HttpSession sesion = request.getSession();
-            
-            sesion.setAttribute("lista", lista);
-            request.getRequestDispatcher("catalogo-productos/producto.jsp").forward(request, response);
-            
-        } catch (IOException | NumberFormatException | ServletException e) {
-            out.print("<h1>PROBLEMA "+ e + "</h1>");
-        }
-            
+        
+    }
+    public static ArrayList<Producto> retornoLista(){
+        ArrayList <Producto> pro = Usuario.proCliente;
+        
+        return pro;
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -69,7 +59,10 @@ public class CargarProductos extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-            
+        
+        
+//        request.getSession().setAttribute("pro", pro);
+//        request.getRequestDispatcher("../detalleVenta.jsp").forward(request, response);
     }
 
     /**

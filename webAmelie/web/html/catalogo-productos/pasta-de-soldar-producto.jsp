@@ -1,6 +1,6 @@
 <%-- 
-    Document   : pasta-de-soldar
-    Created on : 30-oct-2018, 9:20:16
+    Document   : pasta-de-soldar-producto
+    Created on : 13-nov-2018, 14:50:42
     Author     : luis
 --%>
 
@@ -15,19 +15,19 @@
         <link rel="stylesheet" href="../../css/ed-grid.css">
         <link rel="stylesheet" href="../../css/styles.css">
         <link rel="stylesheet" href="../../css/catalogo-productos.css">
-        <script type="text/javascript"> 
-            function Redirigir(){
+        <script type="text/javascript">
+            function Redirigir() {
                 alert("Producto Agregado");
-                document.location.href="../../AgregarProducto"; 
+                document.location.href = "../../AgregarProducto";
             }
         </script>
-       <script>
-           function Redirigir2(){
-               document.location.href="../../TerminarCompra";
-           }
-       </script>
+        <script>
+            function Redirigir2() {
+                document.location.href = "../../TerminarCompra";
+            }
+        </script>
 
-        <title>R3D | Catalogo</title>
+        <title>R3D | Producto-Pasta-de-soldar</title>
     </head>
     <body>
         <header class="main-header cross-center">
@@ -51,80 +51,66 @@
 
 
         <div class="ed-container main-caract">
-
             <div class="ed-item l-25" name="">
                 <h2>Pasta para Soldar</h2>
                 <img class="img-producto to-center" src="../../img/catalogo/pasta-de-soldar.jpeg" alt="pasta-de-soldar"/>
             </div>
-
             <div class="ed-item l-50">
-
                 <div class="ed-item fila-caract-gral">
                     <p>Marca :</p>
                 </div>
-
                 <div class="ed-item fila-caract">
                     <p>Indepp</p>
                 </div>
 
                 <div class="ed-item fila-caract-gral">
-                    <p>Peso :</p>
+                    <p>Peso producto :</p>
                 </div>
-
                 <div class="ed-item fila-caract">
                     <p>0,104 kg</p>
                 </div>
 
                 <div class="ed-item fila-caract-gral">
-                    <p>Garantía :</p>
+                    <p>Garantia producto :</p>
                 </div>
-
                 <div class="ed-item fila-caract">
                     <p>3 meses</p>
                 </div>
 
                 <div class="ed-item fila-caract-gral">
-                    <p>Material :</p>
+                    <p>Material producto :</p>
                 </div>
-
                 <div class="ed-item fila-caract">
                     <p>Estaño</p>
                 </div>
 
                 <div class="ed-item fila-caract-gral">
-                    <p>Origen :</p>
+                    <p>Origen producto :</p>
                 </div>
-
                 <div class="ed-item fila-caract">
                     <p>Chile</p>
                 </div>
-                
-                <div class="ed-item fila-caract-gral">
-                    <p>Precio :</p>
-                </div>
-
-                <div class="ed-item fila-caract">
-                    <p>$ 1.499</p>
-                </div>
-
             </div>
 
             <div class="ed-item l-25">
                 <div class="ed-item">
                     <p class="fila-caract-gral">
-                        Descripción :
+                        Descripcion producto :
                     </p>  
                     <p>
                         Su uso es complementario a la soldadura. Se utiliza para 
                         limpiar la superficie antes de ser soldada. Fácil de utilizar.
                     </p>
 
+                    <p>
+                    <h4> Precio : $ 1.990 </h4>  
+                    </p>
+
+                </div>
+                <div class="ed-item">
+                    <p><input class="form-cantidad" type="text" name="cantidad-producto" value="" /> Cantidad producto </p>
                 </div>
 
-                <div class="ed-item">
-                    <p><input class="form-cantidad" type="text" name="cantidad-producto" placeholder="0" />  Cantidad</p>
-                </div>
-                <br>
                 <div class="ed-item">
                     <button class="button radius main-form-btn btn-comprar" onclick="Redirigir()">Agregar</button>
                 </div>
@@ -134,11 +120,6 @@
 
             </div>
         </div>
-
-
-
-
-
 
         <footer class="main-footer" role="contentinfo" itemscope="" itemtype="http://schema.org/WPFooter">
             <div class="ed-container main-footer--content">

@@ -5,6 +5,8 @@
  */
 package Modelo;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Felipe
@@ -16,6 +18,8 @@ public class Cliente {
     private String apellidoPaterno;
     private String apellidoMaterno;
     private String email;
+    
+    
     
     public Cliente(){
         nombre="";

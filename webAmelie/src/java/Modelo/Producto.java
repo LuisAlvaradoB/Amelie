@@ -19,9 +19,9 @@ public class Producto {
     private String descripcion;
     private String material;
     private String origen;
-    private String rutaImagen;
-    private int cantidadstock;
     private int precio;
+    private int cantidadComprada;
+    private int precioTotalProducto;
     
     
     public Producto(){
@@ -33,25 +33,17 @@ public class Producto {
         descripcion="";
         material="";
         origen="";
-        rutaImagen="";
-        cantidadstock=0;
         precio=0;
+        cantidadComprada =0;
+        precioTotalProducto=0;
     }
 
-    public int getPrecio() {
-        return precio;
+    public int getPrecioTotalProducto() {
+        return precioTotalProducto;
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
-    public String getRutaImagen() {
-        return rutaImagen;
-    }
-
-    public void setRutaImagen(String rutaImagen) {
-        this.rutaImagen = rutaImagen;
+    public void setPrecioTotalProducto(int precioTotalProducto) {
+        this.precioTotalProducto = precioTotalProducto;
     }
 
     public int getCodigo() {
@@ -60,6 +52,22 @@ public class Producto {
 
     public void setCodigo(int codigo) {
         this.codigo = codigo;
+    }
+
+    public int getCantidadComprada() {
+        return cantidadComprada;
+    }
+
+    public void setCantidadComprada(int cantidadComprada) {
+        this.cantidadComprada = cantidadComprada;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     /**
@@ -163,16 +171,6 @@ public class Producto {
     /**
      * @return the cantidadstock
      */
-    public int getCantidadstock() {
-        return cantidadstock;
-    }
-
-    /**
-     * @param cantidadstock the cantidadstock to set
-     */
-    public void setCantidadstock(int cantidadstock) {
-        this.cantidadstock = cantidadstock;
-    }
     
     
 }
