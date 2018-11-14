@@ -18,7 +18,7 @@
             <nav class="ed-item s-70 m-80 l-50 main-end cross-center">
                 <ul class="main-menu ed-menu l-horizontal">
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Inicio</a></li>
-                    <li class="main-menu-item"><a class="main-menu-link" href="#">Catalogo</a></li>
+                    <li class="main-menu-item"><a class="main-menu-link" href="html/catalogoInvitado.jsp">Catalogo</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Ubicación</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="#">Preguntas Frecuentes</a></li>
                     <li class="main-menu-item"><a class="main-menu-link" href="html/login.jsp">Iniciar Sesión</a></li>
@@ -65,25 +65,25 @@
                 <img class="producto-oferta" src="img/herramientas/atornillador-electrico.jpeg" alt="atornillador-electrico"/>
                 <p>Atornillador inalámbrico 1/4" DCF060 Dewalt</p>
                 <h3 class="txt-oferta-precio">Oferta Internet: $ 39.990</h3>
-                <button class="button radius main-form-btn"><img class="svg-cart" src="assets/svg/043-cart.svg"></button>
+                <button class="button radius main-form-btn"><a href="html/login.jsp"><img class="svg-cart" src="assets/svg/043-cart.svg"></a></button>
             </div>
             <div class="ed-item l-25 main-ofertas-producto">
                 <img class="producto-oferta" src="img/herramientas/sierra-circular.jpeg" alt="sierra-circular"/>
                 <p>Sierra circular + taladro percutor + sierra caladora</p>
                 <h3 class="txt-oferta-precio">Oferta Internet: $ 69.990</h3>
-                <button class="button radius main-form-btn"><img class="svg-cart" src="assets/svg/043-cart.svg"></button>
+                <button class="button radius main-form-btn"><a href="html/login.jsp"><img class="svg-cart" src="assets/svg/043-cart.svg"></a></button>
             </div>
             <div class="ed-item l-25 main-ofertas-producto">
                 <img class="producto-oferta" src="img/herramientas/taladro-percutor.jpeg" alt="taladro-percutor"/>
                 <p>Taladro percutor GSB 16 RE 750w Bosch</p>
                 <h3 class="txt-oferta-precio">Oferta Internet: $ 78.990</h3>
-                <button class="button radius main-form-btn"><img class="svg-cart" src="assets/svg/043-cart.svg"></button>
+                <button class="button radius main-form-btn"><a href="html/login.jsp"><img class="svg-cart" src="assets/svg/043-cart.svg"></a></button>
             </div>
             <div class="ed-item l-25 main-ofertas-producto">
                 <img class="producto-oferta" src="img/herramientas/set-taladro.jpeg" alt="set-taladro"/>
                 <p>Set taladro inalámbrico CD121K100 101 piezas Black+Decker</p>
                 <h3 class="txt-oferta-precio"> Oferta Internet: $ 45.990</h3>
-                <button class="button radius main-form-btn"><img class="svg-cart" src="assets/svg/043-cart.svg"></button>
+                <button class="button radius main-form-btn"><a href="html/login.jsp"><img class="svg-cart" src="assets/svg/043-cart.svg"></a></button>
             </div>
         </div>
         
@@ -92,7 +92,7 @@
                 
             </div>
             <div class="ed-item l-20">
-                <button class="button radius main-btn-ir-catalogo">Ir al catálogo</button>
+                <button class="button radius main-btn-ir-catalogo"><a href="html/login.jsp">Ir al catálogo</a></button>
             </div>
             <div class="ed-item l-40"></div>
         </div>
